@@ -49,7 +49,7 @@ model_yp <- "F:/research stuff/FS_PostDoc/Occupancy_analysis_simulations/WHWO_R6
 
 nc <- 4
 nb <- 5000
-ni <- 10000
+ni <- 20000
 nt <- 1
 
 library(R2jags)
@@ -74,7 +74,7 @@ if(any((MaxN-frst_n)<0)) {
 }
 #________________________________________________#
 
-for(i in 2:33) {
+for(i in 1:sims) {
   # Compile data for analysis
   Y.arry <- array(NA,dim=c(n.trns,10,2,20)) #dim = transects, max points, max visits, max years
   for(f in 1:length(forest)) {
@@ -133,7 +133,7 @@ for(i in 2:33) {
   parameters <- c("p","PSI")
   out<-jags(data,inits,parameters,model_yp,n.thin=nt,n.chains=nc,n.burnin=nb,n.iter=ni)
   if(any(round(out$BUGSoutput$summary[,"Rhat"],digits=1)>=1.1)|any(out$BUGSoutput$summary[,"n.eff"]<100))
-    ni.new <- 10000
+    ni.new <- ni
   while(any(round(out$BUGSoutput$summary[,"Rhat"],digits=1)>=1.1)|any(out$BUGSoutput$summary[,"n.eff"]<100)){
     ni.new <- ni.new*2
     out<-update(out,n.iter=ni.new)
@@ -146,8 +146,6 @@ library(R.utils)
 library(abind)
 library(dplyr)
 library(stringr)
-
-load(paste(path,"Results.RData",sep=""))
 
 PSIprd_yp.sim <- pprd_yp.sim <- array(NA,dim=c(sims,n.yrs,3))
 PSIprd_yp.trend <- matrix(NA,sims,5)
