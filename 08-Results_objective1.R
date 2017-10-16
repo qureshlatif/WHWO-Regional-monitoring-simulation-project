@@ -154,7 +154,7 @@ p <- ggdraw() +
                               "Power to observe decline"),size=30,
                     x=c(0,0), y=c(0.1,0.2), angle=c(0, 90))
 #p
-save_plot("manuscript/Figure_Obj1.tiff", p, ncol = 3.5, nrow = 3.5)
+save_plot("manuscript/Figure_Obj1.tiff", p, ncol = 3.5, nrow = 3.5, dpi = 600)
 
 
 ### Reduced figure for presentation ###
@@ -222,9 +222,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -248,9 +248,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -278,9 +278,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -313,9 +313,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -339,9 +339,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -369,9 +369,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -404,9 +404,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -430,9 +430,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -460,9 +460,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -495,9 +495,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -521,9 +521,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -551,9 +551,9 @@ p <- ggplot(data = dat,aes(x=Year,y=PSI))
 for(i in 1:sims) {
   p <- p + geom_line(data=dat[which(dat$sim==i),],aes(x=Year,y=PSI),alpha=0.3,size=1)
 }
-p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="blue")
+p <- p + geom_errorbar(aes(ymin=PSI.lo,ymax=PSI.hi),width=0.1,alpha=0.3,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.4,color="black")
-p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="red")
+p <- p + geom_point(dat = dat.true, aes(x=year, y=PSI), size=4, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks = c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0, 1.05), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -581,7 +581,7 @@ p <- ggdraw() +
 #p
 
 setwd("F:/research stuff/FS_PostDoc/Occupancy_analysis_simulations/WHWO_R6_monitoring/Power_analysis_via_simulation/R6/")
-save_plot("manuscript/Figure_Psi_estimates.tiff", p, ncol = 4, nrow = 4, dpi = 50)
+save_plot("manuscript/Figure_Psi_estimates.tiff", p, ncol = 4, nrow = 4, dpi = 600)
 
 ###########################
 # Detectability estimates #
@@ -674,9 +674,9 @@ dat.plot$lambda <- dat.plot$lambda + runif(nrow(dat.plot),-0.008,0.008)
 dat.true$lmb <- dat.true$lmb + runif(nrow(dat.true),-0.008,0.008)
 
 p <- ggplot(data = dat.plot,aes(x=lambda,y=p))
-p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.001,alpha=0.15,color="blue")
+p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.001,alpha=0.15,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.3,color="black")
-p <- p + geom_point(data = dat.true, aes(x=lmb, y=p), size=3, alpha=0.3, color="red")
+p <- p + geom_point(data = dat.true, aes(x=lmb, y=p), size=3, alpha=0.3, color="#D55E00")
 p <- p + ylab(NULL) + xlab(expression(lambda[N])) +
   scale_x_continuous(breaks=c(0.9, 0.95, 0.98, 1)) +
   scale_y_continuous(lim = c(0, 1.05), breaks = seq(0, 1, by = 0.2)) +
@@ -708,9 +708,9 @@ dat.true <- data.frame(cbind(year = rep(seq(1,20), each = 30), p = as.numeric(tr
 dat.true$year <- dat.true$year + runif(nrow(dat.true), -0.2, 0.2)
 
 p <- ggplot(data = dat,aes(x=Year,y=p))
-p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="blue")
+p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.3,color="black")
-p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="red")
+p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks=c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0,1.05), breaks=c(0, 0.2, 0.4, 0.6, 0.8, 1)) +  
@@ -740,9 +740,9 @@ dat.true <- data.frame(cbind(year = rep(seq(1,20), each = 30), p = as.numeric(tr
 dat.true$year <- dat.true$year + runif(nrow(dat.true), -0.2, 0.2)
 
 p <- ggplot(data = dat,aes(x=Year,y=p))
-p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="blue")
+p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.3,color="black")
-p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="red")
+p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks=c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0,1.05), breaks=c(0, 0.2, 0.4, 0.6, 0.8, 1)) +  
@@ -772,9 +772,9 @@ dat.true <- data.frame(cbind(year = rep(seq(1,20), each = 30), p = as.numeric(tr
 dat.true$year <- dat.true$year + runif(nrow(dat.true), -0.2, 0.2)
 
 p <- ggplot(data = dat,aes(x=Year,y=p))
-p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="blue")
+p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.3,color="black")
-p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="red")
+p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks=c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0,1.05), breaks=c(0, 0.2, 0.4, 0.6, 0.8, 1)) +  
@@ -804,9 +804,9 @@ dat.true <- data.frame(cbind(year = rep(seq(1,20), each = 30), p = as.numeric(tr
 dat.true$year <- dat.true$year + runif(nrow(dat.true), -0.2, 0.2)
 
 p <- ggplot(data = dat,aes(x=Year,y=p))
-p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="blue")
+p <- p + geom_errorbar(aes(ymin=p.lo,ymax=p.hi),width=0.1,alpha=0.15,color="#0072B2")
 p <- p + geom_point(size=3,alpha=0.3,color="black")
-p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="red")
+p <- p + geom_point(data = dat.true, aes(x=year, y=p), size=3, alpha=0.3, color="#D55E00")
 p <- p + ylab(NULL) + xlab(NULL) +
   scale_x_continuous(breaks=c(1, 5, 10, 15, 20)) +  
   scale_y_continuous(lim = c(0,1.05), breaks=c(0, 0.2, 0.4, 0.6, 0.8, 1)) +  
@@ -826,7 +826,7 @@ p <- ggdraw() +
 #p
 
 setwd("F:/research stuff/FS_PostDoc/Occupancy_analysis_simulations/WHWO_R6_monitoring/Power_analysis_via_simulation/R6/")
-save_plot("manuscript/Figure_p_estimates.tiff", p, ncol = 3, nrow = 4, dpi = 50)
+save_plot("manuscript/Figure_p_estimates.tiff", p, ncol = 3, nrow = 4, dpi = 600)
 
 ####################################################
 ## Plot occupancy trend estimates vs true lambdas ##
@@ -973,13 +973,13 @@ dat.cp$X <- dat.yp$X <- dat.lr$X <- dat.cp$lmbN + runif(nrow(dat.cp),-0.005,0.00
 pcp <- ggplot(data = dat.cp,aes(x=X,y=med)) +
   geom_point(size=3,alpha=0.3) +
   geom_errorbar(aes(ymin=lo,ymax=hi),width=0.003,alpha=0.3) +
-  geom_point(x=0.9,y=0.9,size=6,color="red") + # Add accuracy targets for true abundance trends
-  geom_point(x=0.95,y=0.95,size=6,color="red") +
-  geom_point(x=0.98,y=0.98,size=6,color="red") +
-  geom_point(x=1,y=1,size=6,color="red") +
-  geom_point(x=0.9,y=0.9525030,size=6,color="blue") + # Add accuracy targets for true occupancy trends
-  geom_point(x=0.95,y=0.9854334,size=6,color="blue") +
-  geom_point(x=0.98,y=0.9963604,size=6,color="blue") +
+  geom_point(x=0.9,y=0.9,size=6,color="#D55E00") + # Add accuracy targets for true abundance trends
+  geom_point(x=0.95,y=0.95,size=6,color="#D55E00") +
+  geom_point(x=0.98,y=0.98,size=6,color="#D55E00") +
+  geom_point(x=1,y=1,size=6,color="#D55E00") +
+  geom_point(x=0.9,y=0.9525030,size=6,color="#0072B2") + # Add accuracy targets for true occupancy trends
+  geom_point(x=0.95,y=0.9854334,size=6,color="#0072B2") +
+  geom_point(x=0.98,y=0.9963604,size=6,color="#0072B2") +
   scale_x_continuous(breaks=c(0.9,0.95,0.98,1)) +
   scale_y_continuous(breaks=c(0.8,0.9,1)) +
   ylab(NULL) + xlab(NULL) +
@@ -1000,13 +1000,13 @@ pcp <- ggplot(data = dat.cp,aes(x=X,y=med)) +
 pyp <- ggplot(data = dat.yp,aes(x=X,y=med)) +
   geom_point(size=3,alpha=0.3) +
   geom_errorbar(aes(ymin=lo,ymax=hi),width=0.003,alpha=0.3) +
-  geom_point(x=0.9,y=0.9,size=6,color="red") + # Add accuracy targets for true occupancy trends
-  geom_point(x=0.95,y=0.95,size=6,color="red") +
-  geom_point(x=0.98,y=0.98,size=6,color="red") +
-  geom_point(x=1,y=1,size=6,color="red") +
-  geom_point(x=0.9,y=0.9525030,size=6,color="blue") + # Add accuracy targets for true occupancy trends
-  geom_point(x=0.95,y=0.9854334,size=6,color="blue") +
-  geom_point(x=0.98,y=0.9963604,size=6,color="blue") +
+  geom_point(x=0.9,y=0.9,size=6,color="#D55E00") + # Add accuracy targets for true occupancy trends
+  geom_point(x=0.95,y=0.95,size=6,color="#D55E00") +
+  geom_point(x=0.98,y=0.98,size=6,color="#D55E00") +
+  geom_point(x=1,y=1,size=6,color="#D55E00") +
+  geom_point(x=0.9,y=0.9525030,size=6,color="#0072B2") + # Add accuracy targets for true occupancy trends
+  geom_point(x=0.95,y=0.9854334,size=6,color="#0072B2") +
+  geom_point(x=0.98,y=0.9963604,size=6,color="#0072B2") +
   scale_x_continuous(breaks=c(0.9,0.95,0.98,1)) +
   scale_y_continuous(breaks=c(0.8,0.9,1,1.1)) +
   ylab(NULL) + xlab(NULL) +
@@ -1027,13 +1027,13 @@ pyp <- ggplot(data = dat.yp,aes(x=X,y=med)) +
 plr <- ggplot(data = dat.lr,aes(x=X,y=med)) +
   geom_point(size=3,alpha=0.3) +
   geom_errorbar(aes(ymin=lo,ymax=hi),width=0.003,alpha=0.3) +
-  geom_point(x=0.9,y=0.9,size=6,color="red") + # Add accuracy targets for true occupancy trends
-  geom_point(x=0.95,y=0.95,size=6,color="red") +
-  geom_point(x=0.98,y=0.98,size=6,color="red") +
-  geom_point(x=1,y=1,size=6,color="red") +
-  geom_point(x=0.9,y=0.9525030,size=6,color="blue") + # Add accuracy targets for true occupancy trends
-  geom_point(x=0.95,y=0.9854334,size=6,color="blue") +
-  geom_point(x=0.98,y=0.9963604,size=6,color="blue") +
+  geom_point(x=0.9,y=0.9,size=6,color="#D55E00") + # Add accuracy targets for true occupancy trends
+  geom_point(x=0.95,y=0.95,size=6,color="#D55E00") +
+  geom_point(x=0.98,y=0.98,size=6,color="#D55E00") +
+  geom_point(x=1,y=1,size=6,color="#D55E00") +
+  geom_point(x=0.9,y=0.9525030,size=6,color="#0072B2") + # Add accuracy targets for true occupancy trends
+  geom_point(x=0.95,y=0.9854334,size=6,color="#0072B2") +
+  geom_point(x=0.98,y=0.9963604,size=6,color="#0072B2") +
   scale_x_continuous(breaks=c(0.9,0.95,0.98,1)) +
   scale_y_continuous(breaks=c(0.9,1)) +
   ylab(NULL) + xlab(NULL) +
@@ -1066,7 +1066,7 @@ p <- ggdraw() +
 #p
 
 setwd("F:/research stuff/FS_PostDoc/Occupancy_analysis_simulations/WHWO_R6_monitoring/Power_analysis_via_simulation/R6/")
-save_plot("manuscript/Figure_trend_estimates.tiff", p, ncol = 3, nrow = 3.5, dpi = 50)
+save_plot("manuscript/Figure_trend_estimates.tiff", p, ncol = 3, nrow = 3.5, dpi = 600)
 
 #### Abridged version for presentation ####
 ## Estimated occupancy vs true abundance trends

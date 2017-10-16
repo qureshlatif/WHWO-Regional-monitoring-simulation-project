@@ -101,7 +101,7 @@ p <- ggdraw() +
   draw_plot(ptrd, x = 0, y = 0.65, width = 0.878, height = 0.35) +
   draw_plot_label("lambda[N]",size=25,x=0.865,y=0.84,parse=T)
 
-save_plot("manuscript/Figure_npnts_&_PanelDesign_cp.tiff", p, ncol = 3.5, nrow = 3.5, dpi = 50)
+save_plot("manuscript/Figure_npnts_&_PanelDesign_cp.tiff", p, ncol = 3.5, nrow = 3.5, dpi = 600)
 
 ## Logistic regression (apparent occupancy)
 dat <- out[17:28,]
@@ -160,7 +160,7 @@ p <- ggdraw() +
   draw_plot(ptrd, x = 0, y = 0.65, width = 0.878, height = 0.35) +
   draw_plot_label("lambda[N]",size=25,x=0.865,y=0.84,parse=T)
 
-save_plot("manuscript/Figure_npnts_&_PanelDesign_logreg.tiff", p, ncol = 3.5, nrow = 3.5, dpi = 50)
+save_plot("manuscript/Figure_npnts_&_PanelDesign_logreg.tiff", p, ncol = 3.5, nrow = 3.5, dpi = 600)
 
 ############# Plot power for reduced repeat-visits ###############
 dat <- out[13:16,]
@@ -211,4 +211,4 @@ p <- ggdraw() +
   draw_plot(ptrd, x = 0, y = 0.65, width = 0.96, height = 0.35) +
   draw_plot_label("lambda[N]",size=25,x=0.95,y=0.855,parse=T)
 
-save_plot("manuscript/Figure_vary_PrpRepVisits.tiff", p, ncol = 3.5, nrow = 3.5, dpi=50) #thumbnail
+save_plot("manuscript/Figure_vary_PrpRepVisits.tiff", p, ncol = 3.5, nrow = 3.5, dpi=600) #thumbnail

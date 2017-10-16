@@ -57,7 +57,7 @@ for(i in 1:30) dat <- rbind(dat, c(1, 1)) # Add representation of no-trend scena
 
 dseg <- data.frame(x = 0.9, y = 0.9, xe = 1, ye = 1)
 pLmb_10pt <- ggplot(data = dat_10pt,aes(x=lmbN,y=lmbPsi)) +
-  geom_segment(aes(x = x, y = y, xend = xe, yend = ye), data = dseg, color = "red", size = 2) +
+  geom_segment(aes(x = x, y = y, xend = xe, yend = ye), data = dseg, color = "#D55E00", size = 2) +
   geom_point(size=3, alpha=0.2, color="black") +
   ylab(expression(lambda[psi["10-point transects"]])) + xlab(NULL) +
   scale_x_continuous(breaks=c(0.9, 0.95, 0.98, 1)) +
@@ -82,7 +82,7 @@ for(i in 1:30) dat <- rbind(dat, c(1, 1)) # Add representation of no-trend scena
 
 dseg <- data.frame(x = 0.9, y = 0.9, xe = 1, ye = 1)
 pLmb_3pt <- ggplot(data = dat_3pt,aes(x=lmbN,y=lmbPsi)) +
-  geom_segment(aes(x = x, y = y, xend = xe, yend = ye), data = dseg, color = "red", size = 2) +
+  geom_segment(aes(x = x, y = y, xend = xe, yend = ye), data = dseg, color = "#D55E00", size = 2) +
   geom_point(size=3, alpha=0.2, color="black") +
   ylab(expression(lambda[psi["3-point transects"]])) + xlab(expression(lambda[N])) +
   scale_x_continuous(breaks=c(0.9, 0.95, 0.98, 1)) +
@@ -99,7 +99,7 @@ p <- ggdraw() +
   draw_plot(pLmb_3pt, x = 0.49, y = 0, width = 0.49, height = 0.525)
 
 setwd("F:/research stuff/FS_PostDoc/Occupancy_analysis_simulations/WHWO_R6_monitoring/Power_analysis_via_simulation/R6/")
-save_plot("manuscript/Figure_truth.tiff", p, ncol = 3, nrow = 3, dpi = 100)
+save_plot("manuscript/Figure_truth.tiff", p, ncol = 3, nrow = 3, dpi = 600)
 
 # Mean true occupancy trends #
 tapply(dat_10pt$lmbPsi, round(dat_10pt$lmbN, digits = 2), mean)
